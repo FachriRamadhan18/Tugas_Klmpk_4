@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kelompok 4/11-Agregasi Lanjutan Dan Relasi.md",
+                "file": "Kelompok 4/11-Revisi Agregasi Lanjutan Dan Relasi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "11-Agregasi Lanjutan Dan Relasi"
+              "title": "11-Revisi Agregasi Lanjutan Dan Relasi"
             }
           }
         ],
@@ -179,20 +179,23 @@
   },
   "active": "1386e7dea10223c9",
   "lastOpenFiles": [
+    "Kelompok 4/11-Revisi Agregasi Lanjutan Dan Relasi.md",
+    "Kelompok 4/11-Revisi Agregasi Lanjutan Dan Relasi.md",
+    "Kelompok 4/ERD.md",
+    "Kelompok 4/Aset/db_fix.jpg",
+    "Kelompok 4/Aset/erd_fix.jpg",
+    "Kelompok 4/Aset/hsil_q_3.png.png",
+    "Kelompok 4/Agregasi Lanjutan Dan Relasi.md",
+    "Kelompok 4/Tugas.md",
     "Kelompok 4/Aset/hsil_q_2.png",
     "Kelompok 4/Aset/hsil_q_1.png",
     "Kelompok 4/Aset/F1.jpg",
     "Kelompok 4/Aset/erd_bd.png",
     "Kelompok 4/Aset/erd_awal.png",
-    "Kelompok 4/ERD.md",
-    "Kelompok 4/11-Agregasi Lanjutan Dan Relasi.md",
     "Query Dasar.md",
     "show db.png",
     "rental dillah.png",
-    "mysql.png",
-    "drop db.png",
     "[.md",
-    "Kelompok 4/Tugas.md",
     "assets/DROPTABLE.md",
     "assets",
     "TUGAS",
@@ -203,7 +206,6 @@
     "8-Pembuatan ERD-Kelompok 4.md",
     "Kelompok 4/8-Pembuatan ERD-Kelompok 4.md",
     "Kelompok 4/ERD & Kardinalitas.md",
-    "Kelompok 4/Aset/ERD.jpg",
     "Kelompok 4/ERD Studi Kasus.md"
   ]
 }
