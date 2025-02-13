@@ -67,7 +67,6 @@ CREATE TABLE panitia_event (
     FOREIGN KEY (ID_Panitia) REFERENCES panitia(ID_Panitia),
     FOREIGN KEY (ID_Event) REFERENCES event_sekolah(ID_Event)
 );
-
 ```
 
 **Tabel Sponsor_Event**
@@ -79,8 +78,6 @@ CREATE TABLE sponsor_event (
     FOREIGN KEY (ID_Sponsor) REFERENCES sponsor(ID_Sponsor),
     FOREIGN KEY (ID_Event) REFERENCES event_sekolah(ID_Event)
 );
-
-
 ```
 
 **Tabel Pendaftaran_Peserta
@@ -92,7 +89,6 @@ CREATE TABLE pendaftaran_peserta (
     FOREIGN KEY (ID_Peserta) REFERENCES peserta(ID_Peserta),
     FOREIGN KEY (ID_Event) REFERENCES event_sekolah(ID_Event)
 );
-
 ```
 
 **Hasil :**
@@ -104,7 +100,7 @@ CREATE TABLE pendaftaran_peserta (
 1. **Tabel `event_sekolah`:**
     - Menyimpan informasi tentang event sekolah, seperti nama event, deskripsi, lokasi, tanggal, dan penyelenggara.
     - **Primary Key:** `ID_Event`.
-2. **Tabel `paniti a`:*
+2. **Tabel `panitia`:*
     - Berisi data panitia yang mengelola event, termasuk nama panitia, jabatan, dan kontak.
     - **Primary Key:** `ID_Panitia`.
 3. **Tabel `panitia_event`:**
@@ -112,20 +108,23 @@ CREATE TABLE pendaftaran_peserta (
     - **Foreign Keys:**
         - `ID_Panitia` (mengacu ke tabel `panitia`).
         - `ID_Event` (mengacu ke tabel `event_sekolah`).
-4. **Tabel `sponsor`:**
+        - `ID_Panitia_Event` (mengacu ke tabel `panitia` dan `event_sekolah`).
+1. **Tabel `sponsor`:**
     - Menyimpan data sponsor, seperti nama sponsor dan nomor telepon.
     - **Primary Key:** `ID_Sponsor`.
-5. **Tabel `sponsor_event`:**
+2. **Tabel `sponsor_event`:**
     - Tabel penghubung untuk relasi _many-to-many_ antara sponsor dan event.
     - **Foreign Keys:**
         - `ID_Sponsor` (mengacu ke tabel `sponsor`).
         - `ID_Event` (mengacu ke tabel `event_sekolah`).
-6. **Tabel `peserta`:**
+        - `ID_Sponsor_Event` (mengacu ke tabel `sponsor` dan `event_sekolah`).
+1. **Tabel `peserta`:**
     - Berisi data peserta, termasuk nama, kelas, dan kontak.
     - **Primary Key:** `ID_Peserta`.
-7. **Tabel `peserta_event`:**
+2. **Tabel `pendaftaran_peserta`:**
     - Tabel penghubung untuk relasi _many-to-many_ antara peserta dan event.
     - **Foreign Keys:**
+	    - `ID_Peserta_Event` (mengacu ke tabel `peserta` dan `event_sekolah`).
         - `ID_Peserta` (mengacu ke tabel `peserta`).
         - `ID_Event` (mengacu ke tabel `event_sekolah`).
 
@@ -139,7 +138,7 @@ CREATE TABLE pendaftaran_peserta (
     
     - Relasi _many-to-many_ melalui tabel `panitia_event`.
     - Tabel event_sekolah terhubung dengan tabel panitia karena hubungan antar panitia dan event tidak terbatas. Panitia dapat berpartisipasi dalam berbagai event, dan setiap event dapat memiliki lebih dari satu panitia.
-    - didalam relasi tabel event_sekolah dengan tabel panitia terdapat tabel pivot atau tabel penghubung bernama tabel `panitia_event`  dan terdapat didalamnya data berupa `ID_Panitia_Event`  sebagai Primary Key adapun `id_panitia` sebagai Foreign key dan `id_event`  sebagai Foreign key 
+    - didalam relasi tabel event_sekolah dengan tabel panitia terdapat tabel pivot atau tabel penghubung bernama tabel `panitia_event` dan terdapat didalamnya data berupa `id_panitia`  , `id_event`  sebagai Foreign key dan `id_panitia_event` sebagai primary key
 
 2. **`event_sekolah` dengan `sponsor`:**
     
@@ -220,6 +219,8 @@ HAVING
     - **HAVING:** Menyaring hanya event yang memiliki lebih dari satu panitia.
 
 
+
+### 3. Sertakan pula penjelasan dan analisis kalian pada soal nomor 1 dan 2.
 **2** **Penjelasan Query 1**
 1. `SELECT`: Memilih kolom yang ingin ditampilkan, yaitu `Nama_Event` dan `JumlahPanitia`.
 2. `FROM`: Menentukan tabel utama yang digunakan, yaitu `Event_Sekolah`.
