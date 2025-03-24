@@ -1,1 +1,1 @@
-![gambar](Aset/ERD.jpg)
+![gambar](Aset/erd_fix.jpg)

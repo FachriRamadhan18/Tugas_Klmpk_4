@@ -20,12 +20,13 @@ Setelah memahami pembuatan ERD serta menentukan kardinalitas langkah berikutnya 
 4. Apa hubungan antara LRS dan Normalisasi berikan penjelasan disertai contohnya!
 
 **Jawaban :**
-1. **LRS (Logical Relational Schema)** adalah skema logis yang menggambarkan hubungan antar entitas dalam bentuk tabel relasional pada database. LRS digunakan untuk mengubah rancangan konseptual (ERD) menjadi model yang dapat diterapkan dalam sistem database relasional.
+1. **LRS (Logical Relational Schema)** adalah skema logis yang menggambarkan hubungan antar entitas dalam bentuk tabel relasional pada database. **LRS** digunakan untuk mengubah rancangan konseptual **(ERD)** menjadi model yang dapat diterapkan dalam sistem database relasional.
 2. **Tujuan dari LRS, dan mengapa ERD harus dikonversikan ke LRS!**
 	- Mempermudah implementasi database dalam sistem manajemen basis data (DBMS).
 	- Menyesuaikan rancangan konseptual (ERD) agar sesuai dengan model relasional.
 	- Memastikan bahwa data dapat diakses dan diorganisir secara efisien. 
-	- ERD harus dikonversi ke LRS karena ERD bersifat konseptual dan belum dalam bentuk yang dapat digunakan langsung dalam DBMS. LRS mengubahnya menjadi bentuk tabel yang memiliki atribut, relasi, dan kunci utama.
+	- ERD harus dikonversi ke LRS karena ERD bersifat konseptual dan belum dalam bentuk yang dapat digunakan langsung dalam DBMS. 
+	- LRS mengubahnya menjadi bentuk tabel yang memiliki atribut, relasi, dan kunci utama.
 3.  **Aturan mengkonversikan ERD ke LRS dan contohnya!**
 	- Setiap entitas dalam ERD menjadi tabel dalam LRS.Contoh: Jika ada entitas Mahasiswa(id, nama, alamat) dalam ERD, maka di LRS akan menjadi tabel Mahasiswa(id, nama, alamat) dengan id sebagai primary key.
 	- Setiap atribut menjadi kolom dalam tabel.Contoh: Entitas Dosen(id, nama, nip) akan dikonversi menjadi tabel dengan kolom id, nama, dan nip.

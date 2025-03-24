@@ -13,7 +13,7 @@
 3 : Sangat Aktif
 # Jelaskan setiap relasi yang terjadi pada ERD kelompok (Proyek basis data sekolah) jelaskan setiap relasi tabel yang terjadi mengapa kardinalitasnya 1:1, 1:N, N:N.  
 
-![gambar](Aset/hp7.jpg)
+![gambar](Aset/erd_fix.jpg)
 
 ### Penjelasan
 **1. Panitia - Event Sekolah (Many-to-Many)**
